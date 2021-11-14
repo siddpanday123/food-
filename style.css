@@ -31,7 +31,7 @@ body{
 }
 
 section{
-  padding:2rem 9%;
+  padding: 2rem 9%;
 }
 
 .heading{
@@ -158,23 +158,66 @@ header .navbar a:hover{
 }
 
 .home .content h3{
-  font-size: 5rem;
+  font-size: 4rem;
   color:#333;
 }
 
 .home .content p{
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   color:#666;
   padding:1rem 0;
 }
 
+.speciality .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+} 
 
+.speciality .box-container .box{
+  flex:1 1 25rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+  border: .1rem solid rgba(0, 0, 0, .3);
+  cursor: pointer;
+  border-radius: .5rem;
+}
+.speciality .box-container .box .image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
 
+.speciality .box-container .box .content{
+  text-align: center;
+  background: #fff;
+  padding: 2rem;  
+}
 
+.speciality .box-container .box .content img{
+  margin: 1.5rem 0;
+}
+.speciality .box-container .box .content h3{
+  font-size: 2.5rem;
+  color: #333;
+}
 
+.speciality .box-container .box .content p{
+  font-size: 1.6rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.speciality .box-container .box:hover .image{
+  top: 0;
+}
 
-
-
+.speciality .box-container .box:hover .content{
+  transform: translateY(100%);
+}
 
 
 
@@ -194,56 +237,53 @@ header .navbar a:hover{
 /* media quarry */
 
 @media(max-width:991px) {
-    
-    html{
-        font-size: 55%;
-        
-    }
-    header{
-        padding: 2rem;
-    }
-    
+  
+  html{
+    font-size: 55%;
+  }
+  header{
+    padding: 2rem;
+  }
+  section{
+    padding:2rem;
+  }  
 }
-section{
-  padding:2rem;
-}
-
 
 
 
 @media(max-width:768px) {
-    #menu-bar{
-        display: initial;
-    }
-    
-    header .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0px;
-        right: 0px;
-        background: #f7f7f7;
-        border-top: .1rem solid rgba(0, 0, 0, .1);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    header .navbar.active{
-        clip-path: polygon(0 0,100% 0,100% 100%, 0% 100%);
-    }
-    header .navbar a{
-        margin: 1.5rem;
-        padding: 1.5rem;
-        display: block;
-        border: .2rem solid rgba(0, 0, 0, .1);
-        border-left: .5rem solid var(--red);
-        background: #fff;
-    }
-    
+  #menu-bar{
+    display: initial;
+  }
+  
+  header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    background: #f7f7f7;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%, 0% 100%);
+  }
+  header .navbar a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: block;
+    border: .2rem solid rgba(0, 0, 0, .1);
+    border-left: .5rem solid var(--red);
+    background: #fff;
+  }
+  
 }
 
 @media(max-width:400px) {
-    
-    html{
-        font-size: 50%;
-    }
+  
+  html{
+    font-size: 50%;
+  }
 }
 
 
